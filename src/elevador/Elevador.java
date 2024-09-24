@@ -9,7 +9,7 @@ import java.util.List;
 
 public class Elevador {
     // Instância única do Singleton
-    private static Elevador singleton;
+    private static Elevador elevador;
 
     private int totalAndares;
     private int andarAtual;
@@ -41,11 +41,11 @@ public class Elevador {
         this.filaAndares = new FilaPendentes(this);
     }
 
-    public static Elevador getInstance(int totalAndares) {
-        if (singleton == null) {
-            singleton = new Elevador(totalAndares);
+    public static Elevador getInstance() {
+        if (elevador == null) {
+            elevador = new Elevador(10);
         }
-        return singleton;
+        return elevador;
     }
 
     public int getTotalAndares() {

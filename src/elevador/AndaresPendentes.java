@@ -16,7 +16,7 @@ public class AndaresPendentes {
         if(andar <= elevador.getTotalAndares() && andar >= 0 && !andaresPendentes.contains(andar)) {
             andaresPendentes.add(andar);
         } else {
-            throw new Exception("Operação nao permitida!");
+            throw new Exception("Chamada já efetuada!");
         }
     }
 
@@ -24,7 +24,7 @@ public class AndaresPendentes {
         if(andar <= elevador.getTotalAndares() && andar >= 0 && andaresPendentes.contains(andar)) {
             andaresPendentes.remove((Integer) andar);
         } else {
-            throw new Exception("Operação nao permitida!");
+            throw new Exception("Chamada já efetuada!");
         }
     }
 

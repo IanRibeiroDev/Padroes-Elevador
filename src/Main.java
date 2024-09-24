@@ -1,17 +1,28 @@
 import elevador.Elevador;
+import fachada.Fachada;
 
 public class Main {
     public static void main(String[] args) {
-        Elevador e = Elevador.getInstance(10);
+        Fachada controlador = Fachada.getInstance();
 
-        e.addAndarSubindo(4);
-        e.addAndarSubindo(6);
-        e.addAndarSubindo(9);
+        controlador.clicarBotaoSubindo(4);
+        controlador.clicarBotaoSubindo(6);
+        controlador.clicarBotaoSubindo(9);
 
-        e.addAndarDescendo(4);
-        e.addAndarDescendo(2);
-        e.addAndarDescendo(10);
+        controlador.clicarBotaoDescendo(4);
+        controlador.clicarBotaoDescendo(7);
+        controlador.clicarBotaoDescendo(10);
 
-        e.mover();
+        controlador.mover();
+
+        controlador.clicarBotaoElevador(1);
+        controlador.clicarBotaoElevador(6);
+        controlador.clicarBotaoElevador(8);
+
+        controlador.clicarBotaoSubindo(6);
+        controlador.clicarBotaoSubindo(8);
+        controlador.clicarBotaoDescendo(6);
+
+        controlador.mover();
     }
 }
